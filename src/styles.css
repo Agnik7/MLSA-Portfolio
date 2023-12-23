@@ -243,6 +243,8 @@ img.socialIcon {
 .nav-icon {
   display: none;
   background-color: transparent;
+  border:none;
+  outline:none
 }
 
 @media screen and (max-width: 960px) {
