@@ -31,28 +31,28 @@ const imageAltText = "desktop with books and laptop";
  */
 const projectList = [
   {
-    title: "10 Things To Know About Azure Static Web Apps 🎉",
+    title: "ReserveBite",
     description:
-      "Collaboration to create a beginner friendly article to help explain Azure Static Web Apps and tooling to get started.",
-    url: "https://dev.to/azure/10-things-to-know-about-azure-static-web-apps-3n4i",
+      "A website that makes booking restaurant tables easier than ever. Currently under development.",
+    url: "https://reserve-bite.vercel.app/",
   },
   {
-    title: "Web Development for Beginners",
+    title: "MeloMix",
     description:
-      "Contributed sketch note imagery to accompany each lesson. These help provide visual representation of what is being taught.",
-    url: "https://github.com/microsoft/web-dev-for-beginners",
+      "MeloMix is a music streaming website where users can play and listen to their favourite songs seamlessly.",
+    url: "https://github.com/melomix",
   },
   {
-    title: "My Resume Site",
+    title: "Creatigenius",
     description:
-      "Created from Microsoft's resume workshop and deployed to GitHub pages. Includes my experience and design abilities.",
-    url: "https://github.com/microsoft/workshop-library/tree/main/full/build-resume-website",
+      "An opensource website that helps you boost your creativity and shine in the world of literature.",
+    url: "https://github.com/Agnik7/CreatiGenius",
   },
   {
-    title: "GitHub Codespaces and github.dev",
+    title: "GlobeTrotters",
     description:
-      "Video interview to explain when to use GitHub.dev versus GitHub Codespaces, and how best to use each tool.",
-    url: "https://www.youtube.com/watch?v=c3hHhRME_XI",
+      "GlobeTrotters is a website that helps users book for hotels and flight tickets easily.",
+    url: "https://github.com/Agnik7/GlobeTrotters",
   },
 ];
 
@@ -60,8 +60,8 @@ const Portfolio = () => {
   return (
     <section className="padding" id="portfolio">
       <h2 style={{ textAlign: "center" }}>Portfolio</h2>
-      <div style={{ display: "flex", flexDirection: "row", paddingTop: "3rem" }}>
-        <div style={{ maxWidth: "40%", alignSelf: "center" }}>
+      <div className="project-wrapper">
+        <div className="project-image">
           <img
             src={image}
             style={{ height: "90%", width: "100%", objectFit: "cover" }}
@@ -71,7 +71,12 @@ const Portfolio = () => {
         <div className="container">
           {projectList.map((project) => (
             <div className="box" key={project.title}>
-              <a href={project.url} target="_blank" rel="noopener noreferrer">
+              <a
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-name"
+              >
                 <h3 style={{ flexBasis: "40px" }}>{project.title}</h3>
               </a>
               <p className="small">{project.description}</p>
