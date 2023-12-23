@@ -20,6 +20,9 @@ const Header = () => {
             <a href="#about">About</a>
           </li>
           <li className="nav-item">
+            <a href="#education">Education</a>
+          </li>
+          <li className="nav-item">
             <a href="#portfolio">Portfolio</a>
           </li>
           <li className="nav-item">
